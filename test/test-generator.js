@@ -66,7 +66,7 @@ describe('calling with an argument "potato"', function(){
   });
 });*/
 
-describe('The function generate_2d should exist', function()
+/*describe('The function generate_2d should exist', function()
   {
     it('should be a function', function() 
       {
@@ -99,3 +99,4 @@ describe('calling with an argument "potato"', function(){
     expect(mda.generate_1d('potato')).to.be.empty();
   });
 });
+*/
