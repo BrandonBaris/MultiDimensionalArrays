@@ -3,11 +3,16 @@ module.exports = {
   {
     var tmpArr = [];
     var randomNumber;
+
+    /* tests if the value is not a number (eg. string) and if it's 
+    not an undefined number (eg. no argument) */
     if (isNaN(somevalue) === true && somevalue !== undefined )
       {
         return tmpArr;
       }
- 
+
+    /* creates an 'n' specified amount of items if a number is specified
+    and if there is no number specified, it creates a 3 element array */
     if (somevalue > 0)
       {
         for(i =0; i < somevalue; i++)
@@ -25,7 +30,6 @@ module.exports = {
             }
           return tmpArr;
         }
-        
 },
   
   generate_2d : function()
