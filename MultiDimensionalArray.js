@@ -2,7 +2,6 @@ module.exports = {
   generate_1d : function(somevalue)
   {
     var tmpArr = [];
-    var randomNumber;
     var i;
 
     /* tests if the value is not a number (eg. string) and if it's 
@@ -39,8 +38,6 @@ module.exports = {
   generate_2d : function(first_arr_ele,second_arr_ele)
  {
     var tmpArr = [];
-    var randomNumber;
-    var full_random = [];
 
 /*    if (isNaN(second_arr_ele) === true && second_arr_ele !== undefined )
       {
@@ -53,7 +50,7 @@ module.exports = {
           {
             tmpArr.push(this.generate_1d(second_arr_ele));
           }
-        console.log('If N arguements are given ', tmpArr);
+        //console.log('If N arguments are given ', tmpArr);
         return tmpArr;
     }
 
@@ -63,7 +60,7 @@ module.exports = {
           {
             tmpArr.push(this.generate_1d());
           }
-        console.log('If N arguements are given ', tmpArr);
+        //console.log('If N arguments are given ', tmpArr);
         return tmpArr;
     } else
     //if (first_arr_ele === undefined && second_arr_ele === undefined)
@@ -72,16 +69,13 @@ module.exports = {
           {
             tmpArr.push(this.generate_1d());
           }
-        //console.log('If no arguements are given for anything ', tmpArr);
+        //console.log('If no arguments are given for anything ', tmpArr);
         return tmpArr;
     } 
   },
  generate_3d : function(first_arr_ele,second_arr_ele,third_arr_ele)
  {
     var tmpArr = [];
-    var tmpArr2 = [];
-    var randomNumber;
-    var full_random = [];
 
 /*    if (isNaN(third_arr_ele) === true && third_arr_ele !== undefined )
       {
@@ -94,8 +88,7 @@ module.exports = {
           {
             tmpArr.push(this.generate_2d(second_arr_ele,third_arr_ele));
           }
-        //console.log('If N arguements are given ', tmpArr);
-            console.log(tmpArr);
+        console.log('If 3 arguments are given ', tmpArr);
 
         return tmpArr;
     }
@@ -115,7 +108,7 @@ module.exports = {
           {
             tmpArr.push(this.generate_1d());
           }
-        //console.log('If no arguements are given for anything ', tmpArr);
+        //console.log('If no arguments are given for anything ', tmpArr);
         return tmpArr;
     } */
   }
