@@ -89,3 +89,23 @@ describe('calling with arguments 5 and 4', function(){
     expect(result3_2d).to.have.length(5);
   });
 });
+
+// GENERATOR 3
+describe('The function generate_3d should exist', function()
+  {
+    it('should be a function', function() 
+      {
+        expect(mda.generate_3d).to.exist();
+        expect(mda.generate_3d).to.be.a('function');
+      });
+  });
+
+describe('calling with 3 arguments: 3,4,5', function()
+  {
+    it('should return an array of 3 arrays with 4 arrays with 5 elements in each of them', function() 
+      {
+        result1_3d = mda.generate_3d(3,4,5);
+        expect(result1_3d).to.be.an('array');
+        expect(result1_3d).to.have.length(3);
+      });
+  });

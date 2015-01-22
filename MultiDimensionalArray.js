@@ -42,10 +42,10 @@ module.exports = {
     var randomNumber;
     var full_random = [];
 
-    if (isNaN(second_arr_ele) === true && second_arr_ele !== undefined )
+/*    if (isNaN(second_arr_ele) === true && second_arr_ele !== undefined )
       {
         return tmpArr;
-      } 
+      } */
 
     if (first_arr_ele > 0 && second_arr_ele > 0)
     {
@@ -53,11 +53,54 @@ module.exports = {
           {
             tmpArr.push(this.generate_1d(second_arr_ele));
           }
-        //console.log('If N arguements are given ', tmpArr);
+        console.log('If N arguements are given ', tmpArr);
         return tmpArr;
     }
 
     if (first_arr_ele > 0 && second_arr_ele === undefined)
+    {
+      for( i =0; i <  first_arr_ele; i++)
+          {
+            tmpArr.push(this.generate_1d());
+          }
+        console.log('If N arguements are given ', tmpArr);
+        return tmpArr;
+    } else
+    //if (first_arr_ele === undefined && second_arr_ele === undefined)
+      {
+        for( i =0; i <  3; i++)
+          {
+            tmpArr.push(this.generate_1d());
+          }
+        //console.log('If no arguements are given for anything ', tmpArr);
+        return tmpArr;
+    } 
+  },
+ generate_3d : function(first_arr_ele,second_arr_ele,third_arr_ele)
+ {
+    var tmpArr = [];
+    var tmpArr2 = [];
+    var randomNumber;
+    var full_random = [];
+
+/*    if (isNaN(third_arr_ele) === true && third_arr_ele !== undefined )
+      {
+        return generate_2d(first_arr_ele,second_arr_ele);
+      } */
+
+    if (first_arr_ele > 0 && second_arr_ele > 0 && third_arr_ele > 0)
+    {
+      for(var  j =0; j < first_arr_ele; j++)
+          {
+            tmpArr.push(this.generate_2d(second_arr_ele,third_arr_ele));
+          }
+        //console.log('If N arguements are given ', tmpArr);
+            console.log(tmpArr);
+
+        return tmpArr;
+    }
+
+/*    if (first_arr_ele > 0 && second_arr_ele === undefined)
     {
       for( i =0; i <  first_arr_ele; i++)
           {
@@ -74,30 +117,6 @@ module.exports = {
           }
         //console.log('If no arguements are given for anything ', tmpArr);
         return tmpArr;
-    } 
-      /*else
-        {
-          for(var j =0; j < 3; j++)
-            {
-              randomNumber = this.generate_1d(second_arr_ele);
-              console.log('test2',randomNumber);
-              tmpArr.push(randomNumber);
-            }
-          return tmpArr;
-        }*/
-/*    var tmpArr = [];
-    var innerArray = [];
-      for(var i =0; i < 3; i++)
-      {
-
-        for(var j=0;j<3;j++){
-          var randomNumber = Math.floor(Math.random() *2);
-          tmpArr.push(randomNumber);
-
-        }
-      }
-    tmpArr.push(innerArray);
-    return tmpArr;*/
+    } */
   }
-
 };
