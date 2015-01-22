@@ -91,7 +91,7 @@ module.exports = {
     /* If there are number values higher than 0 in the arguments then
     it will plug second_arr_ele and third_arr_ele arguments into the
     generate_2d function and loop that "first_arr_ele" amount of times*/
-    
+
     if (first_arr_ele > 0 && second_arr_ele > 0 && third_arr_ele > 0)
     {
       for(var  j =0; j < first_arr_ele; j++)
@@ -102,5 +102,18 @@ module.exports = {
 
         return tmpArr;
     }
+  },
+
+  count : function(first_arr_ele){
+    var filtered = first_arr_ele.filter(function(x){
+      return x>0;
+    });
+    console.log('array without the 0s', filtered);
+    /*var additup = filtered.reduce(function(prev,curr){
+      return prev+curr;
+    });*/
+    var additup = filtered.length;
+    console.log('the added values is ',additup);
+    return additup;
   }
 };
