@@ -27,48 +27,31 @@ describe('calling with no arguments', function()
   {
     it('should return an array with 3 random boolean values in it', function() 
       {
-        var result1 = mda.generate_1d();
-        expect(result1).to.be.an('array');
-        expect(result1).to.have.length(3);
+        var result1_1d = mda.generate_1d();
+        expect(result1_1d).to.be.an('array');
+        expect(result1_1d).to.have.length(3);
       });
   });
 
 describe('calling with one argument 4', function(){
   it('should return an array with 4 random boolean values in it', function() 
   {
-    var result2 = mda.generate_1d(4);
-    expect(result2).to.be.an('array');
-    expect(result2).to.have.length(4);
+    var result2_1d = mda.generate_1d(4);
+    expect(result2_1d).to.be.an('array');
+    expect(result2_1d).to.have.length(4);
   });
 });
 
 describe('calling with an argument "potato"', function(){
   it('should return an empty array', function() 
   {
-    var result3 = mda.generate_1d('potato');
-    expect(result3).to.be.an('array');
-    expect(result3).to.be.empty();
+    var result3_1d = mda.generate_1d('potato');
+    expect(result3_1d).to.be.an('array');
+    expect(result3_1d).to.be.empty();
   });
 });
 
 // GENERATOR 2
-
-/*describe('calling with no arguments', function(){
-  it('should return an array with 3 random boolean values in it', function() {
-//    var values = [[1,1,1],[1,1,1],[1,1,1]];
-    var values = mda.generate_1d();
-    expect(values).to.be.an('array');
-    expect(values).to.have.length(3);
-
-    result.forEach(function (innerArray){
-      innerArray.forEach(function (innerValue){
-          expect(innerValue).to.satisfy(function (number){
-            return number < 2;
-          });
-      });
-    });
-  });
-});*/
 
 describe('The function generate_2d should exist', function()
   {
@@ -83,24 +66,26 @@ describe('calling with no arguments', function()
   {
     it('should return an array of 3 arrays with 3 random boolean values in each', function() 
       {
-        expect(mda.generate_2d()).to.be.an('array');
-        expect(mda.generate_2d()).to.have.length(3);
+        result1_2d = mda.generate_2d();
+        expect(result1_2d).to.be.an('array');
+        expect(result1_2d).to.have.length(3);
       });
   });
 
-/*describe('calling with one argument 4', function(){
+describe('calling with one argument 4', function(){
   it('should return an array of 4 arrays with 3 random boolean values in each', function() 
   {
-    expect(mda.generate_2d(4)).to.be.an('array');
-    expect(mda.generate_2d(4)).to.have.length(4);
+    result2_2d = mda.generate_2d(4);
+    expect(result2_2d).to.be.an('array');
+    expect(result2_2d).to.have.length(4);
   });
 });
 
 describe('calling with arguments 5 and 4', function(){
   it('should return an array of 5 arrays with 4 random booleans values in them', function() 
   {
-    expect(mda.generate_2d(5,4)).to.be.an('array');
-    expect(mda.generate_2d(5,4)).to.have.length(5);
+    result3_2d = mda.generate_2d(5,4);
+    expect(result3_2d).to.be.an('array');
+    expect(result3_2d).to.have.length(5);
   });
 });
-*/

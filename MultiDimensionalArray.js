@@ -42,21 +42,39 @@ module.exports = {
     var randomNumber;
     var full_random = [];
 
-   /* if (isNaN(second_arr_ele) === true && second_arr_ele !== undefined )
+    if (isNaN(second_arr_ele) === true && second_arr_ele !== undefined )
       {
         return tmpArr;
-      }
-*/
+      } 
 
+    if (first_arr_ele > 0 && second_arr_ele > 0)
+    {
+      for( i =0; i <  first_arr_ele; i++)
+          {
+            tmpArr.push(this.generate_1d(second_arr_ele));
+          }
+        //console.log('If N arguements are given ', tmpArr);
+        return tmpArr;
+    }
+
+    if (first_arr_ele > 0 && second_arr_ele === undefined)
+    {
+      for( i =0; i <  first_arr_ele; i++)
+          {
+            tmpArr.push(this.generate_1d());
+          }
+        //console.log('If N arguements are given ', tmpArr);
+        return tmpArr;
+    } else
     //if (first_arr_ele === undefined && second_arr_ele === undefined)
-    //  {
+      {
         for( i =0; i <  3; i++)
           {
             tmpArr.push(this.generate_1d());
           }
-        console.log('full_random', tmpArr);
+        //console.log('If no arguements are given for anything ', tmpArr);
         return tmpArr;
-    //  } 
+    } 
       /*else
         {
           for(var j =0; j < 3; j++)
